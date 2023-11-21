@@ -1,6 +1,6 @@
 # Pristine photometric metallicity code 
 
-The details of the method are described in Martin, Starkenburg et al. (2023) [arXiv:2308.01344]. 
+The details of the method are described in Martin, Starkenburg et al. (The Pristine survey -- XXIII. Data Release 1) [arXiv:2308.01344]. 
 
 The main code (Pristine_get-photometric-metallicity.ipynb) goes from input magnitudes (CaHK + Gaia broad-band) to photometric metallicities with uncertainties. 
 
