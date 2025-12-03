@@ -43,5 +43,6 @@ The code uses the following packages (and it was tested with version numbers giv
 NOTE: If this is your first time using dustmaps, you will need to download the dustmap(s) you want to use (see the dustmaps documentation for more details) e.g. for the SFD map:
 
 import dustmaps.sfd
+
 dustmaps.sfd.fetch()
 
