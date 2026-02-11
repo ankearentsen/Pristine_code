@@ -17,16 +17,32 @@ https://drive.google.com/file/d/1zfrGh9-55wCZPAWlSMbW_-SkL6xhZd9C/view?usp=shari
 
 Once the full repository (the code as well as extinction polynomials, training sample etc.) plus the test input file have been downloaded (into the "catalogues" folder), one should be able to run the main code directly. Some customisations can be made in the "Initial settings" cell of the notebook, according to the preferences of the user. 
 
+-----------------------
+
+## Updates
+
+This is an updated version from the DR1 code, swapping out the Python vaex package for the Python polars package (both meant to efficiently deal with large catalogues). 
+
+A new interpolation function is used to derive metallicities from the photometric metallicity grid. This has no significant effect for the vast majority of stars. There is a small effect (0.1-0.2 dex maximum) for hot EMP stars only, see the figures in this folder. 
+
+For the user, the code works the same way and requires the same input/training files as the DR1 code. Apart from the package and interpolation swaps, these are some other changes:
+
+- the output format for the metallicities has been updated to match that of DR1 (e.g. FeH_Pristine_50th or FeH_CaHKsyn_50th instead of FeH_gaia_direct)
+- the first time the reference grid is computed from the training sample it is saved, the next time it is loaded directly rather than being recomputed. 
+- some of the column renaming has been updated, but may require editing based on exactly what kind of file is given as input. A cell has been added to check that all the necessary columns are present before moving on. 
+- some of the helper functions have been moved to a separate file, photmet_utils.py
+
 --------------------
 
 The code uses the following packages (and it was tested with version numbers given in brackets, as well as slightly earlier versions):
-- numpy (1.23.5)
-- pandas (1.5.3)
-- matplotlib (3.4.3)
-- vaex (4.16.1)
-- astropy (5.1)
-- scipy (1.10.0)
-- dustmaps (1.0.12)
 
-Some issues were found when running with a newer version of vaex (4.17). 
+*TO BE UPDATED FOR POLARS VERSION*
+
+--------------------
+
+NOTE: If this is your first time using dustmaps, you will need to download the dustmap(s) you want to use (see the dustmaps documentation for more details) e.g. for the SFD map:
+
+import dustmaps.sfd
+
+dustmaps.sfd.fetch()
 
