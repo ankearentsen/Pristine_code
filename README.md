@@ -19,11 +19,11 @@ Once the full repository (the code as well as extinction polynomials, training s
 
 -----------------------
 
-## Updates
+## Updates since version 1 (used for Pristine DR1)
 
 This is an updated version from the DR1 code, swapping out the Python vaex package for the Python polars package (both meant to efficiently deal with large catalogues). 
 
-A new interpolation function is used to derive metallicities from the photometric metallicity grid. This has no significant effect for the vast majority of stars. There is a small effect (0.1-0.2 dex maximum) for hot EMP stars only, see the figures in this folder. 
+A new interpolation function is used to derive metallicities from the photometric metallicity grid. This has no significant effect for the vast majority of stars. There is a small effect (0.1-0.2 dex maximum) for hot EMP stars only, see the Pristine DR2 paper (Yuan, Ardern-Arentsen et al. 2026). 
 
 For the user, the code works the same way and requires the same input/training files as the DR1 code. Apart from the package and interpolation swaps, these are some other changes:
 
@@ -34,15 +34,22 @@ For the user, the code works the same way and requires the same input/training f
 
 --------------------
 
-The code uses the following packages (and it was tested with version numbers given in brackets, as well as slightly earlier versions):
+The code uses the following packages:
 
-*TO BE UPDATED FOR POLARS VERSION*
+pandas
+polars
+numpy
+matplotlib
+astropy
+scipy
+pickle
+fitsio
+dustmaps
 
 --------------------
 
-NOTE: If this is your first time using dustmaps, you will need to download the dustmap(s) you want to use (see the dustmaps documentation for more details) e.g. for the SFD map:
+NOTE: If you are running dustmaps for the first time, you will need to download the dustmap(s) you want to use (see the dustmaps documentation for more details) e.g. for the SFD map:
 
 import dustmaps.sfd
-
 dustmaps.sfd.fetch()
 
