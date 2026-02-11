@@ -36,29 +36,20 @@ For the user, the code works the same way and requires the same input/training f
 
 The code uses the following packages:
 
-pandas
-
-polars
-
-numpy
-
-matplotlib
-
-astropy
-
-scipy
-
-pickle
-
-fitsio
-
-dustmaps
+pandas  
+polars  
+numpy  
+matplotlib  
+astropy  
+scipy  
+pickle  
+fitsio  
+dustmaps  
 
 --------------------
 
 NOTE: If you are running dustmaps for the first time, you will need to download the dustmap(s) you want to use (see the dustmaps documentation for more details) e.g. for the SFD map:
 
-import dustmaps.sfd
-
+import dustmaps.sfd  
 dustmaps.sfd.fetch()
 
